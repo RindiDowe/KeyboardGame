@@ -1,0 +1,125 @@
+body {
+  font-family: sans-serif;
+  background: #f7f7f7;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, auto));
+  gap: 6px;
+}
+
+.key-slot {
+  width: 40px;
+  height: 40px;
+  border: 2px dashed #bbb;
+  background: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key-slot.wide { width: 60px; }
+.key-slot.wider { width: 70px; }
+.key-slot.extra-wide { width: 200px; }
+
+.draggables {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.key {
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: grab;
+  user-select: none;
+}
+
+.key.correct {
+  background-color: #a3be8c !important;
+  animation: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.game-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+#reset-button {
+  padding: 6px 12px;
+  background: #5bc0de;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#reset-button:hover {
+  background: #31b0d5;
+}
+
+#complete-message {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #a3be8c;
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  box-shadow: 0 4px 20px #0004;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Color classes for hand zones */
+.red { background: #d9534f; }
+.orange { background: #f0ad4e; }
+.yellow { background: #ffd700; color: #333; }
+.green { background: #5cb85c; }
+.blue { background: #5bc0de; }
+.purple { background: #9370db; }
+.brown { background: #8b4513; }
+.black { background: #333; }
