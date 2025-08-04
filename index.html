@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chromebook Keyboard Activity</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Drag the Keys to the Keyboard</h1>
+
+  <div class="game-stats">
+    <button id="reset-button">🔁 Reset</button>
+    <div>⏱ Time: <span id="timer">0</span>s</div>
+    <div>✅ Score: <span id="score">0</span></div>
+  </div>
+
+  <div class="keyboard">
+    <div class="row">
+      <div class="key-slot" data-key="ESC">Esc</div>
+      <div class="key-slot" data-key="1">1</div>
+      <div class="key-slot" data-key="2">2</div>
+      <div class="key-slot" data-key="3">3</div>
+      <div class="key-slot" data-key="4">4</div>
+      <div class="key-slot" data-key="5">5</div>
+      <div class="key-slot" data-key="6">6</div>
+      <div class="key-slot" data-key="7">7</div>
+      <div class="key-slot" data-key="8">8</div>
+      <div class="key-slot" data-key="9">9</div>
+      <div class="key-slot" data-key="0">0</div>
+      <div class="key-slot" data-key="-">-</div>
+      <div class="key-slot" data-key="=">=</div>
+      <div class="key-slot wide" data-key="BACKSPACE">⌫</div>
+    </div>
+
+    <div class="row">
+      <div class="key-slot wide" data-key="TAB">Tab</div>
+      <div class="key-slot" data-key="Q">Q</div>
+      <div class="key-slot" data-key="W">W</div>
+      <div class="key-slot" data-key="E">E</div>
+      <div class="key-slot" data-key="R">R</div>
+      <div class="key-slot" data-key="T">T</div>
+      <div class="key-slot" data-key="Y">Y</div>
+      <div class="key-slot" data-key="U">U</div>
+      <div class="key-slot" data-key="I">I</div>
+      <div class="key-slot" data-key="O">O</div>
+      <div class="key-slot" data-key="P">P</div>
+      <div class="key-slot" data-key="[">[</div>
+      <div class="key-slot" data-key="]">]</div>
+      <div class="key-slot" data-key="\">\</div>
+    </div>
+
+    <div class="row">
+      <div class="key-slot wider" data-key="CAPS LOCK">Caps</div>
+      <div class="key-slot" data-key="A">A</div>
+      <div class="key-slot" data-key="S">S</div>
+      <div class="key-slot" data-key="D">D</div>
+      <div class="key-slot" data-key="F">F</div>
+      <div class="key-slot" data-key="G">G</div>
+      <div class="key-slot" data-key="H">H</div>
+      <div class="key-slot" data-key="J">J</div>
+      <div class="key-slot" data-key="K">K</div>
+      <div class="key-slot" data-key="L">L</div>
+      <div class="key-slot" data-key=";">;</div>
+      <div class="key-slot" data-key="'">'</div>
+      <div class="key-slot wider" data-key="ENTER">Enter</div>
+    </div>
+
+    <div class="row">
+      <div class="key-slot wider" data-key="SHIFT">Shift</div>
+      <div class="key-slot" data-key="Z">Z</div>
+      <div class="key-slot" data-key="X">X</div>
+      <div class="key-slot" data-key="C">C</div>
+      <div class="key-slot" data-key="V">V</div>
+      <div class="key-slot" data-key="B">B</div>
+      <div class="key-slot" data-key="N">N</div>
+      <div class="key-slot" data-key="M">M</div>
+      <div class="key-slot" data-key=",">,</div>
+      <div class="key-slot" data-key=".">.</div>
+      <div class="key-slot" data-key="/">/</div>
+      <div class="key-slot wider" data-key="SHIFT (R)">Shift</div>
+    </div>
+
+    <div class="row">
+      <div class="key-slot" data-key="CTRL">Ctrl</div>
+      <div class="key-slot" data-key="ALT">Alt</div>
+      <div class="key-slot" data-key="SEARCH">🔍</div>
+      <div class="key-slot extra-wide" data-key="SPACE">Space</div>
+      <div class="key-slot" data-key="ALT2">Alt</div>
+      <div class="key-slot" data-key="ARROW_LEFT">◀</div>
+      <div class="key-slot" data-key="ARROW_UP">▲</div>
+      <div class="key-slot" data-key="ARROW_DOWN">▼</div>
+      <div class="key-slot" data-key="ARROW_RIGHT">▶</div>
+    </div>
+  </div>
+
+  <div class="draggables">
+
+  <div class="key red" data-key="Q" draggable="true">Q</div>
+<div class="key black" data-key="B" draggable="true">B</div>
+<div class="key black" data-key="C" draggable="true">C</div>
+<div class="key black" data-key="D" draggable="true">D</div>
+<div class="key black" data-key="E" draggable="true">E</div>
+<div class="key black" data-key="F" draggable="true">F</div>
+<div class="key black" data-key="G" draggable="true">G</div>
+<div class="key black" data-key="H" draggable="true">H</div>
+<div class="key black" data-key="I" draggable="true">I</div>
+<div class="key black" data-key="J" draggable="true">J</div>
+<div class="key black" data-key="K" draggable="true">K</div>
+<div class="key black" data-key="L" draggable="true">L</div>
+<div class="key black" data-key="M" draggable="true">M</div>
+<div class="key black" data-key="N" draggable="true">N</div>
+<div class="key black" data-key="O" draggable="true">O</div>
+<div class="key black" data-key="P" draggable="true">P</div>
+<div class="key black" data-key="Q" draggable="true">Q</div>
+<div class="key black" data-key="R" draggable="true">R</div>
+<div class="key black" data-key="S" draggable="true">S</div>
+<div class="key black" data-key="T" draggable="true">T</div>
+<div class="key black" data-key="U" draggable="true">U</div>
+<div class="key black" data-key="V" draggable="true">V</div>
+<div class="key black" data-key="W" draggable="true">W</div>
+<div class="key black" data-key="X" draggable="true">X</div>
+<div class="key black" data-key="Y" draggable="true">Y</div>
+<div class="key black" data-key="Z" draggable="true">Z</div>
+<div class="key black" data-key="1" draggable="true">1</div>
+<div class="key black" data-key="2" draggable="true">2</div>
+<div class="key black" data-key="3" draggable="true">3</div>
+<div class="key black" data-key="4" draggable="true">4</div>
+<div class="key black" data-key="5" draggable="true">5</div>
+<div class="key black" data-key="6" draggable="true">6</div>
+<div class="key black" data-key="7" draggable="true">7</div>
+<div class="key black" data-key="8" draggable="true">8</div>
+<div class="key black" data-key="9" draggable="true">9</div>
+<div class="key black" data-key="0" draggable="true">0</div>
+<div class="key black" data-key="-" draggable="true">-</div>
+<div class="key black" data-key="=" draggable="true">=</div>
+<div class="key black" data-key="[" draggable="true">[</div>
+<div class="key black" data-key="]" draggable="true">]</div>
+<div class="key black" data-key="\" draggable="true">\</div>
+<div class="key black" data-key=";" draggable="true">;</div>
+<div class="key black" data-key="'" draggable="true">'</div>
+<div class="key black" data-key="," draggable="true">,</div>
+<div class="key black" data-key="." draggable="true">.</div>
+<div class="key black" data-key="/" draggable="true">/</div>
+<div class="key black" data-key="SHIFT" draggable="true">SHIFT</div>
+<div class="key black" data-key="SHIFT (R)" draggable="true">SHIFT (R)</div>
+<div class="key black" data-key="CAPS LOCK" draggable="true">CAPS LOCK</div>
+<div class="key black" data-key="ENTER" draggable="true">ENTER</div>
+<div class="key black" data-key="SPACE" draggable="true">SPACE</div>
+<div class="key black" data-key="TAB" draggable="true">TAB</div>
+<div class="key black" data-key="ESC" draggable="true">ESC</div>
+<div class="key black" data-key="CTRL" draggable="true">CTRL</div>
+<div class="key black" data-key="ALT" draggable="true">ALT</div>
+<div class="key black" data-key="ALT2" draggable="true">ALT2</div>
+<div class="key black" data-key="SEARCH" draggable="true">SEARCH</div>
+<div class="key black" data-key="ARROW_LEFT" draggable="true">ARROW_LEFT</div>
+<div class="key black" data-key="ARROW_UP" draggable="true">ARROW_UP</div>
+<div class="key black" data-key="ARROW_DOWN" draggable="true">ARROW_DOWN</div>
+<div class="key black" data-key="ARROW_RIGHT" draggable="true">ARROW_RIGHT</div>
+
+  </div>
+
+  <audio id="success-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3"></audio>
+
+  <div id="complete-message" class="hidden">
+    ✔ Great job—you matched every key!
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
